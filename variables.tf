@@ -1,5 +1,20 @@
 variable "names" {
-    type = list
-    
-    default = ["cmgt-ui","cmgt-backend"]
+  type = list(any)
+
+  default = ["cmgt-ui", "cmgt-backend"]
+}
+
+variable "cluster_name" {
+  type    = string
+  default = "capstone-eks-cluster"
+}
+
+variable "node_group_name" {
+    type = string
+    default = "capstone-eks-terraform"
+}
+
+variable "iam_profile_name" {
+    type = string
+    default = "capstone-eks-worker-profile"
 }
